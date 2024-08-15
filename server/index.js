@@ -8,6 +8,12 @@ const socket = require("socket.io");
 require("dotenv").config();
 
 app.use(cors());
+app.use(cors({
+  origin: "https://chat-app-alpha-seven-25.vercel.app", // Replace with your frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true,
+}));
+
 app.use(express.json());
 
 mongoose
