@@ -2,18 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "server/index.js",
+        "src": "index.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
-        "src": "/api/(.*)",
-        "dest": "/server/index.js"
+        "src": "/(.*)",
+        "dest": "index.js"
       }
-    ],
-    "env": {
-      "MONGO_URL": "mongodb+srv://arihantjaindec2003:7nIMwuCp5YdFdQiM@cluster1.smdem.mongodb.net/chat-app"
-    }
+    ]
   }
-  
