@@ -9,9 +9,9 @@ require("dotenv").config();
 
 
 app.use(cors({
-  origin: "https://chat-app-alpha-seven-25.vercel.app", 
+  origin: ["https://chat-app-alpha-seven-25.vercel.app"], 
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true,
+  credentials: true
 }));
 
 app.use(express.json());
@@ -40,9 +40,9 @@ const server = app.listen(process.env.PORT, () =>
 );
 const io = socket(server, {
   cors: {
-    origin: "https://chat-app-alpha-seven-25.vercel.app",
+    origin: ["https://chat-app-alpha-seven-25.vercel.app"],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true,
+    credentials: true
   },
 });
 
